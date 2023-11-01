@@ -1,0 +1,10 @@
+---
+# tasks file for db
+- name: copy image wordpress  to remotely server 
+  copy:
+    src: services/mariadb
+    dest: /tmp/services
+
+- name: Build ft_mariadb
+  ansible.builtin.command:
+    cmd: docker build -t ft_mariadb  /tmp/services/mariadb/

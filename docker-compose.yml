@@ -1,0 +1,60 @@
+version: '3'
+
+networks:
+  Inception:
+    driver: bridge
+
+volumes:
+  website:
+    driver: local
+    driver_opts:
+      o: 'bind'
+      type: 'none'
+      device: '/home/alukongo/data/website'
+  db:
+    driver: local
+    driver_opts:
+      o: 'bind'
+      type: 'none'
+      device: '/home/alukongo/data/db'
+
+services:
+    mariadb:
+        build: /tmp/services/mariadb/
+        image: mariadb
+        container_name: mariadb
+        env_file:
+          - "./.env"
+        volumes:
+          - db:/var/lib/mysql
+        networks:
+          - Inception
+        restart: always
+
+    wordpress:
+        depends_on:
+          - mariadb
+        build: /tmp/services/wordpress/
+        container_name: wordpress
+        image: wordpress
+        env_file:
+          - "./.env"
+        volumes:
+          - website:/var/www/html
+        networks:
+          - Inception
+        restart: always
+
+    nginx:
+        depends_on:
+          - wordpress
+        build: /tmp/services/nginx/
+        container_name: nginx
+        image: nginx
+        ports:
+          - "443:443"
+        volumes:
+          - website:/var/www/html
+        networks:
+          - Inception
+        restart: always

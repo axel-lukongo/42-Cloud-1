@@ -1,0 +1,10 @@
+---
+# tasks file for nginx
+- name: copy image nginx  to remotely server 
+  copy:
+    src: services/nginx
+    dest: /tmp/services
+
+- name: Build ft_nginx
+  ansible.builtin.command:
+    cmd: docker build -t ft_nginx  /tmp/services/nginx/

@@ -1,0 +1,37 @@
+---
+- name: copy file to destination
+  hosts: all
+  roles:
+   - docker
+   - nginx
+   - db
+   - wordpress
+  become: yes
+  tasks:
+   - name: i copy the env
+     copy:
+       src: group_var/.env
+       dest: .env
+
+   - name: Create data directory for mariadb
+     ansible.builtin.file:
+        path: /home/alukongo/data/db
+        state: directory
+
+   - name: Create data directory for website
+     ansible.builtin.file:
+        path: /home/alukongo/data/website
+        state: directory
+
+   - name: i copy the docker-compose
+     copy:
+       src: docker-compose.yml
+       dest: docker-compose.yml
+  
+   - name: i stop and delete all container who running
+     ansible.builtin.command:
+        cmd: docker-compose down -v
+   
+   - name: i start my services with compose up
+     ansible.builtin.command:
+        cmd: docker-compose up -d
