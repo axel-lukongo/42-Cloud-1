@@ -24,8 +24,8 @@ wp core config  --dbname=$NAME_OF_DB \
 echo "===>  Install Wordpress <==== "
 sleep 5
 
-wp core install --url="alukongo.42.fr" \
-                --title=INCEPTION \
+wp core install --url="51.20.129.20" \
+                --title=MY-CLOUD-1 \
                 --admin_user=$WP_ADMIN\
                 --admin_password=$WP_ADMIN_PASSWORD \
                 --admin_email=$WP_ADMIN_EMAIL \
