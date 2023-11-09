@@ -12,6 +12,7 @@ else
 echo "===> create wp-config.php <==== "
 sleep 5
 
+
 wp core config  --dbname=$NAME_OF_DB \
                 --dbuser=$WP_ADMIN \
                 --dbpass=$WP_ADMIN_PASSWORD \
