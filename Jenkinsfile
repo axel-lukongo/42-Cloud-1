@@ -13,8 +13,8 @@ pipeline {
           
             steps {
               script{
-                def workspace = "/Users/axellukongo/.jenkins/workspace/p1"
-                sh 'ansible-playbook -i inventories/host.yml $workspace/playbook.yml'
+                def workspace = env.WORKSPACE
+                sh '$workspace/ansible-playbook -i inventories/host.yml $workspace/playbook.yml'
               }
             }
         }
