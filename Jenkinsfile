@@ -10,8 +10,12 @@ pipeline {
             }
         }
         stage('deploye') {
+          
             steps {
-              sh 'ansible-playbook -i inventories/host.yml playbook.yml'
+              script{
+                def workspace = "/Users/axellukongo/.jenkins/workspace/p1"
+                sh 'ansible-playbook -i inventories/host.yml $workspace/playbook.yml'
+              }
             }
         }
     }
