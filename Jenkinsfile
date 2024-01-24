@@ -12,7 +12,7 @@ pipeline {
         stage('deploye') {
             steps {
               script{
-                  sh '../p1/ansible-playbook -i inventories/host.yml playbook.yml'
+                  sh 'touch ~/test/salut'
               }
             }
         }
