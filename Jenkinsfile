@@ -21,8 +21,8 @@ pipeline {
             steps {
               script{
                   ansiblePlaybook(
-                  inventory: '/Users/axellukongo/.jenkins/workspace/p1/inventories',  // Remplacez ceci par le chemin de votre inventaire Ansible
-                  playbook: '/Users/axellukongo/.jenkins/workspace/p1/playbook.yml'  // Remplacez ceci par le chemin de votre playbook Ansible
+                  inventory: '/Users/axellukongo/test/42-Cloud-1/inventories',  // Remplacez ceci par le chemin de votre inventaire Ansible
+                  playbook: '/Users/axellukongo/test/42-Cloud-1/playbook.yml'  // Remplacez ceci par le chemin de votre playbook Ansible
                 )
               }
             }
