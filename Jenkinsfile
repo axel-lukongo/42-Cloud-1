@@ -12,7 +12,7 @@ pipeline {
         stage('deploye') {
             steps {
               script{
-                  sh 'ansible-playbook -i inventories/host.yml playbook.yml'
+                  sh '/Users/axellukongo/test/42-Cloud-1/ansible-playbook -i inventories/host.yml playbook.yml'
               }
             }
         }
