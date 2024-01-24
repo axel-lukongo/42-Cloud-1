@@ -4,11 +4,11 @@ pipeline {
         pollSCM('* * * * *') // Scrute le référentiel toutes les minutes
     }
     stages {
-        stage('clone') {
-            steps {
-                git 'https://github.com/axel-lukongo/42-Cloud-1.git'
-            }
-        }
+        // stage('clone') {
+        //     steps {
+        //         git 'https://github.com/axel-lukongo/42-Cloud-1.git'
+        //     }
+        // }
         // stage('deploye') {
         //     steps {
         //       script{
