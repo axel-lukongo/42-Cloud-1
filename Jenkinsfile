@@ -12,7 +12,7 @@ pipeline {
         stage('deploye') {
             steps {
               script{
-                  sh 'touch ~/test/salut'
+                  sh 'touch rererere'
               }
             }
         }
