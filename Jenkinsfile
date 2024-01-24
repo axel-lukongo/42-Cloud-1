@@ -19,7 +19,7 @@ pipeline {
          stage('Debug') {
             steps {
                 script {
-                    sh 'echo $PATH'
+                    sh ' echo $PATH'
                 }
             }
         }
