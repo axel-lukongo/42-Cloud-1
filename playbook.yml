@@ -27,19 +27,19 @@
      copy:
        src: docker-compose.yml
        dest: docker-compose.yml
-  
-   - name: i stop and delete all container who running
-     ansible.builtin.command:
-        cmd: docker-compose down -v
+
+  #  - name: i stop and delete all container who running
+  #    ansible.builtin.command:
+  #       cmd: docker-compose down -v
    
-   - name: i start my services 
-     ansible.builtin.command:
-        cmd: systemctl restart docker
+  #  - name: i start my services 
+  #    ansible.builtin.command:
+  #       cmd: systemctl restart docker
 
-   - name: i build my service
-     ansible.builtin.command:
-       cmd: docker-compose -f /home/ubuntu/docker-compose.yml build
+  #  - name: i build my service
+  #    ansible.builtin.command:
+  #      cmd: docker-compose -f /home/ubuntu/docker-compose.yml build
 
-   - name: i start them
-     ansible.builtin.command:
-       cmd: docker-compose -f /home/ubuntu/docker-compose.yml up --force-recreate -d
+  #  - name: i start them
+  #    ansible.builtin.command:
+  #      cmd: docker-compose -f /home/ubuntu/docker-compose.yml up --force-recreate -d
