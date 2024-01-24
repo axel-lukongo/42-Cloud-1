@@ -12,7 +12,7 @@ pipeline {
         stage{
           steps{
             script{
-              sh '/opt/homebrew/bin/brew install ansible'
+              sh ' /opt/homebrew/bin/brew install ansible'
             }
           }
         }
