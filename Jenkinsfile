@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Installer Ansible (assurez-vous qu'Ansible est installé sur votre agent Jenkins)
                 script {
-                    sh 'apt-get update -y && apt-get install ansible -y'  // Remplacez ceci par la commande appropriée selon votre distribution
+                    sh 'brew update -y && brew install ansible -y'  // Remplacez ceci par la commande appropriée selon votre distribution
                 }
             }
         }
