@@ -9,17 +9,10 @@ pipeline {
                 git 'https://github.com/axel-lukongo/42-Cloud-1.git'
             }
         }
-        stage('install ansible'){
-          steps{
-            script{
-              sh ' /opt/homebrew/bin/brew install ansible'
-            }
-          }
-        }
         stage('deploye') {
             steps {
               script{
-                  sh 'ansible-playbook -i inventories/host.yml playbook.yml'
+                  sh '/opt/homebrew/bin/ansible-playbook -i inventories/host.yml playbook.yml'
               }
             }
         }
