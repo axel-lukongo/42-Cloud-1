@@ -12,7 +12,7 @@ pipeline {
         stage('deploye') {
             steps {
               script{
-                  sh '/opt/homebrew/bin/ansible-playbook -i inventories/host.yml playbook.yml'
+                  sh ' /opt/homebrew/bin/ansible-playbook -i inventories/host.yml playbook.yml'
               }
             }
         }
