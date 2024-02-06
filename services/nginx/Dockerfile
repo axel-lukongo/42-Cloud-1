@@ -12,7 +12,7 @@ RUN     apt-get -y update \
 # i expose this port because this is where i will mapped 
 EXPOSE  443
 
-# i copy the config of nginx in the repos default
+# i copy the config of nginx in the repos default   TEST
 COPY    ./config/nginx.conf /etc/nginx/sites-available/default
 
 # i delete the original config file of nginx because i have my own config file
