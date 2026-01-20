@@ -1,6 +1,6 @@
 # Cloud-1: Automated Infrastructure Deployment with Ansible on AWS
 
-## ☁️ Overview
+## Overview
 This project is an evolution of the **Inception** subject, transitioning from local virtualization to a professional Cloud environment. The objective was to architect and deploy a multi-service Docker infrastructure on a remote instance provided by **AWS**, ensuring full automation and process isolation.
 
 > "There is no cloud, it's just someone else's computer."
