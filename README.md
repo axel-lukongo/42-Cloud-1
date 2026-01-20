@@ -5,7 +5,7 @@ This project is an evolution of the **Inception** subject, transitioning from lo
 
 > "There is no cloud, it's just someone else's computer."
 
-## 🚀 The Core: Professional Automation with Ansible
+## The Core: Professional Automation with Ansible
 While the subject allows for various tools, I chose to place **Ansible** at the heart of this project.
 
 ### Why Ansible for this Project?
@@ -20,7 +20,7 @@ While the subject allows for various tools, I chose to place **Ansible** at the 
 3.  **Docker Orchestration:** Orchestrated the lifecycle of the containers by managing the deployment of the `docker-compose.yml` file.
 4.  **Service Configuration:** Automated the setup of WordPress and PHPMyAdmin to connect seamlessly with the SQL database.
 
-## 🛠 Infrastructure Architecture
+## Infrastructure Architecture
 The setup follows the strict rule of **one process per container**.
 
 * **Cloud Provider:** AWS (Amazon Web Services).
@@ -31,7 +31,7 @@ The setup follows the strict rule of **one process per container**.
     * **MariaDB/MySQL:** The relational database backend.
     * **PHPMyAdmin:** For database management via a web interface.
 
-## 🔐 Reliability and Persistence
+## Reliability and Persistence
 * **Auto-Restart:** All services are configured to restart automatically if the server is rebooted.
 * **Data Persistence:** I used Docker volumes to ensure that all WordPress content and database entries survive container or server restarts.
 * **Security:** The server is configured to use TLS for secure communication, and sensitive services are kept off the public internet.
