@@ -36,7 +36,7 @@ The setup follows the strict rule of **one process per container**.
 * **Data Persistence:** I used Docker volumes to ensure that all WordPress content and database entries survive container or server restarts.
 * **Security:** The server is configured to use TLS for secure communication, and sensitive services are kept off the public internet.
 
-## 💻 How to Run
+## How to Run
 To deploy the entire infrastructure from scratch using the Ansible playbook:
 
 ```bash
