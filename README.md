@@ -40,3 +40,6 @@ To deploy the entire infrastructure from scratch using the Ansible playbook:
 
 ```bash
 ansible-playbook -i inventories/host.yml playbook.yml
+```
+<img width="1536" height="1024" alt="AchitectureCloud1" src="https://github.com/user-attachments/assets/ce143320-9b80-4767-9b97-1d3a5440c5dd" />
+
